@@ -7,23 +7,21 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 
   <style>
+    /* Your existing CSS goes here - no changes needed */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
-
     html {
       scroll-behavior: smooth;
     }
-
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       color: white;
       background-color: #0a0a0a;
       line-height: 1.6;
     }
-
     nav {
       position: fixed;
       top: 0;
@@ -37,7 +35,6 @@
       z-index: 999;
       border-bottom: 1px solid rgba(255, 94, 0, 0.3);
     }
-
     .logo {
       display: flex;
       align-items: center;
@@ -48,12 +45,10 @@
       font-size: 1.4rem;
       transition: all 0.3s ease;
     }
-
     .logo:hover {
       transform: scale(1.05);
       color: #ff5e00;
     }
-
     .logo-icon {
       width: 40px;
       height: 40px;
@@ -68,17 +63,14 @@
       box-shadow: 0 4px 15px rgba(255, 94, 0, 0.3);
       transition: all 0.3s ease;
     }
-
     .logo:hover .logo-icon {
       box-shadow: 0 6px 20px rgba(255, 94, 0, 0.4);
       transform: rotate(10deg);
     }
-
     .nav-links {
       display: flex;
       align-items: center;
     }
-
     nav a:not(.logo) {
       color: white;
       text-decoration: none;
@@ -90,13 +82,11 @@
       padding: 8px 16px;
       border-radius: 25px;
     }
-
     nav a:not(.logo):hover {
       color: #ff5e00;
       background: rgba(255, 94, 0, 0.1);
       transform: translateY(-2px);
     }
-
     nav a:not(.logo)::after {
       content: '';
       position: absolute;
@@ -108,11 +98,9 @@
       transition: all 0.3s ease;
       transform: translateX(-50%);
     }
-
     nav a:not(.logo):hover::after {
       width: 80%;
     }
-
     /* Mobile Menu Styles */
     .mobile-menu-toggle {
       display: none;
@@ -121,7 +109,6 @@
       padding: 5px;
       z-index: 1001;
     }
-
     .hamburger-line {
       width: 25px;
       height: 3px;
@@ -130,21 +117,17 @@
       transition: all 0.3s ease;
       border-radius: 2px;
     }
-
     .mobile-menu-toggle.active .hamburger-line:nth-child(1) {
       transform: rotate(45deg) translate(6px, 6px);
       background: #ff5e00;
     }
-
     .mobile-menu-toggle.active .hamburger-line:nth-child(2) {
       opacity: 0;
     }
-
     .mobile-menu-toggle.active .hamburger-line:nth-child(3) {
       transform: rotate(-45deg) translate(6px, -6px);
       background: #ff5e00;
     }
-
     .mobile-menu {
       display: none;
       position: fixed;
@@ -152,7 +135,7 @@
       left: 0;
       width: 100%;
       height: 100vh;
-      background: 
+      background:
         radial-gradient(ellipse at top left, rgba(255, 94, 0, 0.15) 0%, transparent 50%),
         radial-gradient(ellipse at bottom right, rgba(255, 179, 71, 0.1) 0%, transparent 50%),
         rgba(0, 0, 0, 0.85);
@@ -162,7 +145,6 @@
       padding-top: 110px;
       border: 1px solid rgba(255, 255, 255, 0.1);
     }
-
     .mobile-menu::before {
       content: '';
       position: absolute;
@@ -170,12 +152,11 @@
       left: 0;
       right: 0;
       bottom: 0;
-      background: 
+      background:
         linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, transparent 50%),
         linear-gradient(45deg, rgba(255, 94, 0, 0.03) 0%, transparent 100%);
       pointer-events: none;
     }
-
     .mobile-menu.active {
       display: flex;
       flex-direction: column;
@@ -183,7 +164,6 @@
       justify-content: flex-start;
       animation: slideDown 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     }
-
     @keyframes slideDown {
       from {
         opacity: 0;
@@ -196,7 +176,6 @@
         backdrop-filter: blur(25px);
       }
     }
-
     .mobile-menu-header {
       position: absolute;
       top: 0;
@@ -212,7 +191,6 @@
       padding: 0 25px;
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
     }
-
     .mobile-menu-close {
       color: white;
       font-size: 2.2rem;
@@ -232,18 +210,15 @@
       position: relative;
       z-index: 1001;
     }
-
     .mobile-menu-close:hover {
       background: rgba(255, 94, 0, 0.5);
       transform: scale(1.1) rotate(90deg);
       box-shadow: 0 8px 25px rgba(255, 94, 0, 0.6);
       border-color: rgba(255, 94, 0, 0.8);
     }
-
     .mobile-menu-close:active {
       transform: scale(0.95) rotate(90deg);
     }
-
     .mobile-menu-logo {
       display: flex;
       align-items: center;
@@ -252,7 +227,6 @@
       font-weight: 700;
       font-size: 1.2rem;
     }
-
     .mobile-menu-logo-icon {
       width: 35px;
       height: 35px;
@@ -266,7 +240,6 @@
       color: white;
       box-shadow: 0 4px 15px rgba(255, 94, 0, 0.3);
     }
-
     .mobile-menu a {
       color: white;
       text-decoration: none;
@@ -285,7 +258,6 @@
       position: relative;
       overflow: hidden;
     }
-
     .mobile-menu a::before {
       content: '';
       position: absolute;
@@ -296,25 +268,21 @@
       background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
       transition: left 0.5s;
     }
-
     .mobile-menu a:hover::before {
       left: 100%;
     }
-
     .mobile-menu a:hover {
       background: linear-gradient(45deg, rgba(255, 94, 0, 0.3), rgba(255, 179, 71, 0.2));
       transform: translateY(-3px) scale(1.02);
-      box-shadow: 
+      box-shadow:
         0 15px 35px rgba(255, 94, 0, 0.3),
         0 5px 15px rgba(0, 0, 0, 0.2);
       border: 1px solid rgba(255, 94, 0, 0.4);
       color: #fff;
     }
-
     .mobile-menu a:active {
       transform: translateY(-1px) scale(0.98);
     }
-
     .section {
       min-height: 100vh;
       padding: 120px 40px 80px;
@@ -326,7 +294,6 @@
       position: relative;
       overflow: hidden;
     }
-
     .section::before {
       content: '';
       position: absolute;
@@ -338,45 +305,38 @@
       background-size: 100px 100px;
       background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.15) 1px, transparent 0);
     }
-
     .home {
-      background: 
+      background:
         radial-gradient(ellipse at top left, rgba(255, 94, 0, 0.4) 0%, transparent 50%),
         radial-gradient(ellipse at bottom right, rgba(255, 179, 71, 0.3) 0%, transparent 50%),
         radial-gradient(ellipse at center, rgba(16, 24, 32, 0.8) 0%, #0a0a0a 70%);
     }
-
     .skills {
-      background: 
+      background:
         radial-gradient(ellipse at top right, rgba(138, 43, 226, 0.4) 0%, transparent 50%),
         radial-gradient(ellipse at bottom left, rgba(255, 94, 0, 0.3) 0%, transparent 50%),
         radial-gradient(ellipse at center, rgba(25, 25, 112, 0.2) 0%, #0a0a0a 70%);
     }
-
     .projects {
-      background: 
+      background:
         radial-gradient(ellipse at bottom left, rgba(0, 191, 255, 0.4) 0%, transparent 50%),
         radial-gradient(ellipse at top right, rgba(255, 20, 147, 0.3) 0%, transparent 50%),
         radial-gradient(ellipse at center, rgba(128, 0, 128, 0.2) 0%, #0a0a0a 70%);
     }
-
     .contact {
-      background: 
+      background:
         radial-gradient(ellipse at bottom right, rgba(50, 205, 50, 0.4) 0%, transparent 50%),
         radial-gradient(ellipse at top left, rgba(255, 215, 0, 0.3) 0%, transparent 50%),
         radial-gradient(ellipse at center, rgba(0, 100, 0, 0.2) 0%, #0a0a0a 70%);
     }
-
     h1, h2 {
       margin-bottom: 20px;
       font-weight: 700;
     }
-
     h1 {
       font-size: clamp(2.5rem, 5vw, 4rem);
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     }
-
     h2 {
       font-size: clamp(2rem, 4vw, 3rem);
       margin-bottom: 40px;
@@ -387,26 +347,23 @@
       background-clip: text;
       animation: gradientShift 3s ease-in-out infinite;
     }
-
     @keyframes gradientShift {
       0%, 100% { background-position: 0% 50%; }
       50% { background-position: 100% 50%; }
     }
-
     h1 span {
       background: linear-gradient(45deg, #ffb347, #ff5e00);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
-
     .profile-img {
       width: clamp(250px, 25vw, 350px);
       height: clamp(250px, 25vw, 350px);
       border-radius: 50%;
       object-fit: cover;
       border: 5px solid rgba(255, 255, 255, 0.3);
-      box-shadow: 
+      box-shadow:
         0 0 30px rgba(255, 94, 0, 0.5),
         0 0 60px rgba(255, 179, 71, 0.3),
         0 10px 30px rgba(0, 0, 0, 0.3);
@@ -414,7 +371,6 @@
       transition: all 0.4s ease;
       position: relative;
     }
-
     .profile-img::before {
       content: '';
       position: absolute;
@@ -424,20 +380,17 @@
       z-index: -1;
       animation: rotate 4s linear infinite;
     }
-
     @keyframes rotate {
       from { transform: rotate(0deg); }
       to { transform: rotate(360deg); }
     }
-
     .profile-img:hover {
       transform: scale(1.05) rotate(5deg);
-      box-shadow: 
+      box-shadow:
         0 0 40px rgba(255, 94, 0, 0.7),
         0 0 80px rgba(255, 179, 71, 0.4),
         0 15px 40px rgba(0, 0, 0, 0.4);
     }
-
     .typing-text {
       font-size: clamp(1rem, 2.5vw, 1.5rem);
       border-right: 3px solid #ff5e00;
@@ -449,16 +402,13 @@
       font-weight: 600;
       letter-spacing: 1px;
     }
-
     @keyframes typing {
       from { width: 0; }
       to { width: 100%; }
     }
-
     @keyframes blink {
       50% { border-color: transparent; }
     }
-
     /* About Me Styles */
     .about-me {
       margin-top: 50px;
@@ -467,7 +417,6 @@
       opacity: 0;
       animation: fadeInUp 1s ease 4.5s forwards;
     }
-
     @keyframes fadeInUp {
       from {
         opacity: 0;
@@ -478,7 +427,6 @@
         transform: translateY(0);
       }
     }
-
     .about-content {
       background: rgba(255, 255, 255, 0.08);
       backdrop-filter: blur(15px);
@@ -488,11 +436,10 @@
       text-align: left;
       position: relative;
       overflow: hidden;
-      box-shadow: 
+      box-shadow:
         0 15px 35px rgba(0, 0, 0, 0.3),
         inset 0 1px 0 rgba(255, 255, 255, 0.1);
     }
-
     .about-content::before {
       content: '';
       position: absolute;
@@ -503,11 +450,9 @@
       background: linear-gradient(90deg, transparent, rgba(255, 94, 0, 0.1), transparent);
       transition: left 0.8s;
     }
-
     .about-content:hover::before {
       left: 100%;
     }
-
     .about-content h3 {
       color: #ff5e00;
       font-size: 2rem;
@@ -519,7 +464,6 @@
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
-
     .about-content p {
       color: #ddd;
       line-height: 1.8;
@@ -527,14 +471,12 @@
       margin-bottom: 20px;
       text-align: justify;
     }
-
     .about-highlights {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
       gap: 20px;
       margin-top: 30px;
     }
-
     .highlight-item {
       display: flex;
       align-items: center;
@@ -547,19 +489,16 @@
       color: white;
       font-weight: 600;
     }
-
     .highlight-item:hover {
       background: rgba(255, 94, 0, 0.2);
       transform: translateY(-3px);
       box-shadow: 0 8px 20px rgba(255, 94, 0, 0.3);
     }
-
     .highlight-item i {
       color: #ff5e00;
       font-size: 1.3rem;
       min-width: 20px;
     }
-
     .card-container {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -568,12 +507,11 @@
       max-width: 1400px;
       width: 100%;
     }
-
     .card {
       background: rgba(255, 255, 255, 0.08);
       padding: 30px 25px;
       border-radius: 20px;
-      box-shadow: 
+      box-shadow:
         0 8px 32px rgba(0, 0, 0, 0.3),
         inset 0 1px 0 rgba(255, 255, 255, 0.1);
       backdrop-filter: blur(10px);
@@ -587,7 +525,6 @@
       position: relative;
       overflow: hidden;
     }
-
     .card::before {
       content: '';
       position: absolute;
@@ -598,31 +535,26 @@
       background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
       transition: left 0.5s;
     }
-
     .card:hover::before {
       left: 100%;
     }
-
     .card:hover {
       transform: translateY(-10px) scale(1.02);
       background: rgba(255, 255, 255, 0.15);
-      box-shadow: 
+      box-shadow:
         0 20px 40px rgba(0, 0, 0, 0.4),
         0 0 20px rgba(255, 94, 0, 0.3);
     }
-
     .skill-icon {
       font-size: 3rem;
       margin-bottom: 15px;
       color: #ff5e00;
       transition: all 0.3s ease;
     }
-
     .card:hover .skill-icon {
       transform: scale(1.2) rotate(10deg);
       color: #ffb347;
     }
-
     .show-more-btn {
       margin-top: 30px;
       padding: 12px 24px;
@@ -637,12 +569,10 @@
       box-shadow: 0 4px 15px rgba(255, 94, 0, 0.3);
       display: none;
     }
-
     .show-more-btn:hover {
       transform: translateY(-2px);
       box-shadow: 0 6px 20px rgba(255, 94, 0, 0.4);
     }
-
     .projects-container {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -650,12 +580,11 @@
       max-width: 1400px;
       width: 100%;
     }
-
     .project-card {
       background: rgba(255, 255, 255, 0.08);
       border-radius: 20px;
       overflow: hidden;
-      box-shadow: 
+      box-shadow:
         0 10px 30px rgba(0, 0, 0, 0.3),
         inset 0 1px 0 rgba(255, 255, 255, 0.1);
       backdrop-filter: blur(10px);
@@ -663,7 +592,6 @@
       transition: all 0.4s ease;
       position: relative;
     }
-
     .project-card::before {
       content: '';
       position: absolute;
@@ -675,55 +603,46 @@
       opacity: 0;
       transition: opacity 0.3s ease;
     }
-
     .project-card:hover::before {
       opacity: 1;
     }
-
     .project-card:hover {
       transform: translateY(-10px) scale(1.02);
-      box-shadow: 
+      box-shadow:
         0 20px 40px rgba(0, 0, 0, 0.4),
         0 0 30px rgba(255, 94, 0, 0.2);
     }
-
     .project-card img {
       width: 100%;
       height: 220px;
       object-fit: cover;
       transition: transform 0.4s ease;
     }
-
     .project-card:hover img {
       transform: scale(1.1);
     }
-
     .project-content {
       padding: 25px;
       position: relative;
       z-index: 2;
     }
-
     .project-content h3 {
       margin-bottom: 15px;
       color: #fff;
       font-size: 1.3rem;
       font-weight: 600;
     }
-
     .project-content p {
       font-size: 1rem;
       margin-bottom: 20px;
       color: #ddd;
       line-height: 1.6;
     }
-
     .project-buttons {
       display: flex;
       gap: 15px;
       justify-content: center;
     }
-
     .project-buttons button {
       background: linear-gradient(45deg, #ff5e00, #ffb347);
       color: white;
@@ -737,19 +656,16 @@
       flex: 1;
       max-width: 120px;
     }
-
     .project-buttons button:hover {
       transform: translateY(-2px);
       box-shadow: 0 6px 20px rgba(255, 94, 0, 0.4);
       background: linear-gradient(45deg, #ffb347, #ff5e00);
     }
-
     .contact p {
       font-size: 1.2rem;
       margin: 15px 0;
       color: #ddd;
     }
-
     /* Social Links Styles */
     .social-links {
       display: flex;
@@ -759,7 +675,6 @@
       margin: 30px 0;
       max-width: 600px;
     }
-
     .social-link {
       display: flex;
       align-items: center;
@@ -779,7 +694,6 @@
       min-width: 120px;
       justify-content: center;
     }
-
     .social-link::before {
       content: '';
       position: absolute;
@@ -790,158 +704,127 @@
       background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
       transition: left 0.5s;
     }
-
     .social-link:hover::before {
       left: 100%;
     }
-
     .social-link i {
       font-size: 1.5rem;
       transition: all 0.3s ease;
     }
-
     .social-link:hover {
       transform: translateY(-5px) scale(1.05);
       background: rgba(255, 255, 255, 0.15);
       box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
     }
-
     /* Individual social platform colors */
     .social-link:hover:nth-child(1) {
       background: linear-gradient(45deg, rgba(51, 51, 51, 0.3), rgba(102, 102, 102, 0.2));
       border-color: rgba(51, 51, 51, 0.5);
       box-shadow: 0 15px 35px rgba(51, 51, 51, 0.3);
     }
-
     .social-link:hover:nth-child(2) {
       background: linear-gradient(45deg, rgba(0, 119, 181, 0.3), rgba(0, 119, 181, 0.2));
       border-color: rgba(0, 119, 181, 0.5);
       box-shadow: 0 15px 35px rgba(0, 119, 181, 0.3);
     }
-
     .social-link:hover:nth-child(3) {
       background: linear-gradient(45deg, rgba(225, 48, 108, 0.3), rgba(225, 48, 108, 0.2));
       border-color: rgba(225, 48, 108, 0.5);
       box-shadow: 0 15px 35px rgba(225, 48, 108, 0.3);
     }
-
     .social-link:hover:nth-child(4) {
       background: linear-gradient(45deg, rgba(29, 161, 242, 0.3), rgba(29, 161, 242, 0.2));
       border-color: rgba(29, 161, 242, 0.5);
       box-shadow: 0 15px 35px rgba(29, 161, 242, 0.3);
     }
-
     .social-link:hover:nth-child(5) {
       background: linear-gradient(45deg, rgba(24, 119, 242, 0.3), rgba(24, 119, 242, 0.2));
       border-color: rgba(24, 119, 242, 0.5);
       box-shadow: 0 15px 35px rgba(24, 119, 242, 0.3);
     }
-
     .social-link:hover:nth-child(6) {
       background: linear-gradient(45deg, rgba(114, 137, 218, 0.3), rgba(114, 137, 218, 0.2));
       border-color: rgba(114, 137, 218, 0.5);
       box-shadow: 0 15px 35px rgba(114, 137, 218, 0.3);
     }
-
     /* Enhanced Mobile Responsiveness */
     @media (max-width: 768px) {
       nav {
         padding: 15px 20px;
       }
-
       .logo {
         font-size: 1.2rem;
       }
-
       .logo-icon {
         width: 35px;
         height: 35px;
         font-size: 1rem;
       }
-
       .nav-links {
         display: none;
       }
-
       .mobile-menu-toggle {
         display: flex;
       }
-
       .section {
         padding: 100px 20px 60px;
       }
-
       .card-container {
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         gap: 20px;
       }
-
       .projects-container {
         grid-template-columns: 1fr;
         gap: 30px;
       }
-
       .card-container .card:nth-child(n+5) {
         display: none;
       }
-
       .card-container.show-all .card {
         display: flex;
       }
-
       .show-more-btn {
         display: inline-block;
       }
-
       .project-buttons {
         flex-direction: column;
       }
-
       .project-buttons button {
         max-width: none;
       }
-
       /* Mobile Social Links */
       .social-links {
         gap: 15px;
         margin: 25px 0;
       }
-
       .social-link {
         padding: 12px 20px;
         font-size: 0.9rem;
         min-width: 100px;
       }
-
       .social-link i {
         font-size: 1.3rem;
       }
     }
-
     /* Desktop Enhancements */
     @media (min-width: 1200px) {
       .section {
         padding: 120px 60px 100px;
       }
-
       .card-container {
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         gap: 40px;
       }
-
       .projects-container {
         grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
       }
-
       .card {
         padding: 40px 30px;
       }
-
       .skill-icon {
         font-size: 3.5rem;
       }
     }
-
     /* Ultra-wide screen support */
     @media (min-width: 1600px) {
       .card-container,
@@ -949,7 +832,6 @@
         max-width: 1800px;
       }
     }
-
     /* Modal Styles */
     .modal {
       display: none;
@@ -963,18 +845,15 @@
       backdrop-filter: blur(5px);
       animation: fadeIn 0.3s ease;
     }
-
     .modal.show {
       display: flex;
       align-items: center;
       justify-content: center;
     }
-
     @keyframes fadeIn {
       from { opacity: 0; }
       to { opacity: 1; }
     }
-
     .modal-content {
       background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
       backdrop-filter: blur(20px);
@@ -986,24 +865,22 @@
       width: 90%;
       max-height: 90vh;
       overflow: hidden;
-      box-shadow: 
+      box-shadow:
         0 25px 50px rgba(0, 0, 0, 0.5),
         0 0 50px rgba(255, 94, 0, 0.2);
       animation: slideIn 0.4s ease;
       position: relative;
     }
-
     @keyframes slideIn {
-      from { 
+      from {
         transform: translateY(-50px) scale(0.9);
         opacity: 0;
       }
-      to { 
+      to {
         transform: translateY(0) scale(1);
         opacity: 1;
       }
     }
-
     .modal-header {
       background: linear-gradient(45deg, #ff5e00, #ffb347);
       padding: 25px 30px;
@@ -1011,7 +888,6 @@
       position: relative;
       overflow: hidden;
     }
-
     .modal-header::before {
       content: '';
       position: absolute;
@@ -1023,12 +899,10 @@
       transform: rotate(45deg);
       animation: shimmer 3s ease-in-out infinite;
     }
-
     @keyframes shimmer {
       0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
       100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
     }
-
     .modal-header h2 {
       margin: 0;
       font-size: 1.8rem;
@@ -1036,14 +910,12 @@
       position: relative;
       z-index: 2;
     }
-
     .modal-body {
       padding: 30px;
       color: white;
       overflow-y: auto;
       max-height: calc(90vh - 200px);
     }
-
     .modal-body img {
       width: 100%;
       height: 250px;
@@ -1052,26 +924,22 @@
       margin-bottom: 20px;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     }
-
     .modal-body h3 {
       color: #ffb347;
       margin: 20px 0 10px 0;
       font-size: 1.3rem;
     }
-
     .modal-body p {
       line-height: 1.6;
       margin-bottom: 15px;
       color: #ddd;
     }
-
     .tech-stack {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
       margin: 20px 0;
     }
-
     .tech-tag {
       background: rgba(255, 94, 0, 0.2);
       border: 1px solid rgba(255, 94, 0, 0.4);
@@ -1080,14 +948,12 @@
       font-size: 0.9rem;
       color: #ffb347;
     }
-
     .project-links {
       display: flex;
       gap: 15px;
       margin-top: 25px;
       flex-wrap: wrap;
     }
-
     .project-links a {
       background: linear-gradient(45deg, #ff5e00, #ffb347);
       color: white;
@@ -1098,12 +964,10 @@
       transition: all 0.3s ease;
       box-shadow: 0 4px 15px rgba(255, 94, 0, 0.3);
     }
-
     .project-links a:hover {
       transform: translateY(-2px);
       box-shadow: 0 6px 20px rgba(255, 94, 0, 0.4);
     }
-
     .close {
       position: absolute;
       top: 15px;
@@ -1122,12 +986,10 @@
       background: rgba(255, 255, 255, 0.1);
       transition: all 0.3s ease;
     }
-
     .close:hover {
       background: rgba(255, 255, 255, 0.2);
       transform: scale(1.1);
     }
-
     /* Mobile Modal Adjustments */
     @media (max-width: 768px) {
       .modal-content {
@@ -1135,23 +997,18 @@
         width: calc(100% - 20px);
         max-height: 95vh;
       }
-
       .modal-header {
         padding: 20px;
       }
-
       .modal-header h2 {
         font-size: 1.5rem;
       }
-
       .modal-body {
         padding: 20px;
       }
-
       .project-links {
         flex-direction: column;
       }
-
       .project-links a {
         text-align: center;
       }
@@ -1160,7 +1017,6 @@
 </head>
 <body>
 
-  <!-- Navigation -->
   <nav>
     <a href="#home" class="logo">
       <div class="logo-icon"></div>
@@ -1172,51 +1028,47 @@
       <a href="#projects">Projects</a>
       <a href="#contact">Contact</a>
     </div>
-    <div class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+    <div class="mobile-menu-toggle">
       <div class="hamburger-line"></div>
       <div class="hamburger-line"></div>
       <div class="hamburger-line"></div>
     </div>
   </nav>
 
-  <!-- Mobile Menu -->
   <div class="mobile-menu" id="mobileMenu">
     <div class="mobile-menu-header">
       <div class="mobile-menu-logo">
         <div class="mobile-menu-logo-icon"></div>
         <span>BE THE BEST</span>
       </div>
-      <div class="mobile-menu-close" onclick="closeMobileMenu()" title="Close Menu">
+      <div class="mobile-menu-close" title="Close Menu">
         <i class="fas fa-times"></i>
       </div>
     </div>
-    
-    <!-- Close instruction text -->
+
     <div style="color: rgba(255, 255, 255, 0.7); font-size: 0.9rem; margin-bottom: 20px; text-align: center;">
       Tap the <i class="fas fa-times" style="color: #ff5e00;"></i> button above or tap outside to close
     </div>
-    
-    <a href="#home" onclick="closeMobileMenu()">
+
+    <a href="#home">
       <i class="fas fa-home" style="margin-right: 10px;"></i>Home
     </a>
-    <a href="#skills" onclick="closeMobileMenu()">
+    <a href="#skills">
       <i class="fas fa-code" style="margin-right: 10px;"></i>Skills
     </a>
-    <a href="#projects" onclick="closeMobileMenu()">
+    <a href="#projects">
       <i class="fas fa-project-diagram" style="margin-right: 10px;"></i>Projects
     </a>
-    <a href="#contact" onclick="closeMobileMenu()">
+    <a href="#contact">
       <i class="fas fa-envelope" style="margin-right: 10px;"></i>Contact
     </a>
   </div>
 
-  <!-- Home -->
   <section id="home" class="section home">
     <img src="allfiles/biran.png" alt="Biran Subba" class="profile-img" />
     <h1>Hello, I'm <span>Biran Subba</span></h1>
     <p class="typing-text"></p>
-    
-    <!-- About Me Section -->
+
     <div class="about-me">
       <div class="about-content">
         <h3>About Me</h3>
@@ -1224,12 +1076,10 @@
           Hi, I’m Biran Subba — a third-year B.Tech CSE student (2023–2027) at Sikkim Manipal Institute of Technology.
         </p>
         <p>
-         Passionate about tech, I love building digital solutions that make an impact. From exploring new frameworks to working on real-world projects, I enjoy pushing my skills beyond the classroom.
+          Passionate about tech, I love building digital solutions that make an impact. From exploring new frameworks to working on real-world projects, I enjoy pushing my skills beyond the classroom.
         </p>
         <p>
-         When I’m not coding, I’m either lifting at the gym or diving into the latest tech trends. I believe in balancing mind, body, and code to perform at my best.
-
-
+          When I’m not coding, I’m either lifting at the gym or diving into the latest tech trends. I believe in balancing mind, body, and code to perform at my best.
         </p>
         <div class="about-highlights">
           <div class="highlight-item">
@@ -1253,7 +1103,6 @@
     </div>
   </section>
 
-  <!-- Skills -->
   <section id="skills" class="section skills">
     <h2>My Skills</h2>
     <div class="card-container" id="skillCards">
@@ -1272,10 +1121,9 @@
         <h3>Figma</h3>
       </div>
     </div>
-    <button class="show-more-btn" onclick="toggleSkills()">Show More</button>
+    <button class="show-more-btn" id="showMoreSkillsBtn">Show More</button>
   </section>
 
-  <!-- Projects -->
   <section id="projects" class="section projects">
     <h2>Projects</h2>
     <div class="projects-container">
@@ -1286,7 +1134,7 @@
           <p>Built a full clinic website UI and deployed it using WordPress with responsive design and modern aesthetics.</p>
           <div class="project-buttons">
             <button onclick="window.open('https://karmadentalcare.com', '_blank')">View Project</button>
-            <button onclick="openModal('dental-info-modal')">More Info</button>
+            <button class="more-info-btn" data-modal-id="dental-info-modal">More Info</button>
           </div>
         </div>
       </div>
@@ -1298,7 +1146,7 @@
           <p>Daily, weekly, monthly planning app using React and Node.js with advanced task organization features.</p>
           <div class="project-buttons">
             <button onclick="window.open('https://your-taskmanager-demo.com', '_blank')">View Project</button>
-            <button onclick="openModal('todo-info-modal')">More Info</button>
+            <button class="more-info-btn" data-modal-id="todo-info-modal">More Info</button>
           </div>
         </div>
       </div>
@@ -1310,18 +1158,17 @@
           <p>Comprehensive student data management system with posts, timetable & attendance tracking (ongoing project).</p>
           <div class="project-buttons">
             <button onclick="window.open('https://your-student-assistant-demo.com', '_blank')">View Project</button>
-            <button onclick="openModal('digital-info-modal')">More Info</button>
+            <button class="more-info-btn" data-modal-id="digital-info-modal">More Info</button>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Contact -->
   <section id="contact" class="section contact">
     <h2>Contact Me</h2>
     <p>📧 Email: <a href="mailto:biransubba124@gmail.com" style="color: #ffb347; text-decoration: none;">biransubba124@gmail.com</a></p>
-    
+
     <div class="social-links">
       <a href="https://github.com/biransubba" target="_blank" rel="noopener noreferrer" class="social-link">
         <i class="fab fa-github"></i>
@@ -1348,23 +1195,21 @@
         <span>Discord</span>
       </a>
     </div>
-    
+
     <p style="margin-top: 30px;">Let's connect and build something amazing together!</p>
   </section>
 
-  <!-- Modals -->
-  <!-- Dental Care Info Modal -->
   <div id="dental-info-modal" class="modal">
     <div class="modal-content">
       <div class="modal-header">
         <h2>🦷 Project Details - Karma Dental Care</h2>
-        <span class="close" onclick="closeModal('dental-info-modal')">&times;</span>
+        <span class="close" data-modal-id="dental-info-modal">&times;</span>
       </div>
       <div class="modal-body">
         <img src="allfiles/dental.png" alt="Karma Dental Care Details">
         <h3>Developed with wordpress</h3>
         <p>My first UI project was the complete design and development of the Karma Dental Care website using WordPress, where I focused on creating a responsive and user-friendly experience. </p>
-        
+
         <h3>Key Features</h3>
         <p>• Responsive design that works seamlessly across all devices</p>
         <p>• Online appointment booking system</p>
@@ -1372,7 +1217,7 @@
         <p>• Doctor profiles and qualifications</p>
         <p>• Patient testimonials and reviews</p>
         <p>• Contact forms and location maps</p>
-        
+
         <h3>Technologies Used</h3>
         <div class="tech-stack">
           <span class="tech-tag">WordPress</span>
@@ -1382,45 +1227,37 @@
           <span class="tech-tag">PHP</span>
           <span class="tech-tag">MySQL</span>
         </div>
-        
+
         </div>
     </div>
   </div>
 
-  <!-- Todo App Info Modal -->
   <div id="todo-info-modal" class="modal">
     <div class="modal-content">
       <div class="modal-header">
         <h2>📝 Development Insights - Task Manager</h2>
-        <span class="close" onclick="closeModal('todo-info-modal')">&times;</span>
+        <span class="close" data-modal-id="todo-info-modal">&times;</span>
       </div>
       <div class="modal-body">
         <img src="allfiles/todo .png" alt="Task Manager Development">
         <h3>Project Overview</h3>
         <p>A comprehensive task management application built with React, that helps users organize their daily, weekly, and monthly tasks.</p>
-        
+
         <h3>Key Features</h3>
         <p>• Multi-level task organization (Daily/Weekly/Monthly)</p>
         <p>• Priority-based task sorting and filtering</p>
         <p>• Real-time progress tracking and analytics</p>
-      
-        
-        
-       
-        
+
         <h3>Technologies Used</h3>
         <div class="tech-stack">
           <span class="tech-tag">React</span>
           <span class="tech-tag">Node.js</span>
-          
+
         </div>
-        
+
         <h3>Development Journey</h3>
         <p>This project was part of my summer internship, and it has not only enhanced my development skills but also helped me organize my personal tasks more effectively.</p>
-        
-       
-        
-        
+
         <h3>Future Enhancements</h3>
         <p>• AI-powered task prioritization</p>
         <p>• Calendar integration with Google/Outlook</p>
@@ -1430,12 +1267,11 @@
     </div>
   </div>
 
-  <!-- Digital Assistant Info Modal -->
   <div id="digital-info-modal" class="modal">
     <div class="modal-content">
       <div class="modal-header">
         <h2>🎓 Project Evolution - Digital Student Assistant</h2>
-        <span class="close" onclick="closeModal('digital-info-modal')">&times;</span>
+        <span class="close" data-modal-id="digital-info-modal">&times;</span>
       </div>
       <div class="modal-body">
         <img src="allfiles/digital.png" alt="Digital Assistant Evolution">
@@ -1443,7 +1279,7 @@
         <p>This is a part of our Project-Based Learning work that my friend and I are building together to enhance our practical skills.</p>
         <h3>Project Vision</h3>
         <p>The Digital Student Assistant aims to revolutionize how students manage their academic life by providing a centralized platform that combines academic tracking, social interaction, and administrative tasks in an intuitive interface.</p>
-        
+
         <h3>Completed Features</h3>
         <p>• Student profile management and authentication</p>
         <p>• Interactive timetable with class scheduling</p>
@@ -1451,13 +1287,13 @@
         <p>• Social feed for student announcements and updates</p>
         <p>• Grade tracking and GPA calculation</p>
         <p>• Assignment submission portal</p>
-        
+
         <h3>In Development</h3>
         <p>• AI-powered study recommendations</p>
         <p>• Peer-to-peer study group formation</p>
         <p>• Integration with learning management systems</p>
         <p>• Mobile application development</p>
-        
+
         <h3>Technologies Used</h3>
         <div class="tech-stack">
           <span class="tech-tag">React</span>
@@ -1468,153 +1304,147 @@
           <span class="tech-tag">JWT</span>
           <span class="tech-tag">QR Code API</span>
         </div>
-        
+
         <h3>Development Timeline</h3>
         <p><strong>Phase 1 (Completed):</strong> Core infrastructure and basic features</p>
         <p><strong>Phase 2 (Current):</strong> Advanced features and mobile optimization</p>
         <p><strong>Phase 3 (Planned):</strong> AI integration and advanced analytics</p>
         <p><strong>Phase 4 (Future):</strong> Cross-institution compatibility</p>
-        
+
         </div>
     </div>
   </div>
 
-  <!-- Script -->
   <script>
-    const text = "B. TECH STUDENT | TECH ENTHUSIAST | LEARNER | FITNESS";
-    document.querySelector(".typing-text").textContent = text;
-
-    // Mobile Menu Functions
-    function toggleMobileMenu() {
-      const mobileMenu = document.getElementById('mobileMenu');
-      const menuToggle = document.querySelector('.mobile-menu-toggle');
-      
-      mobileMenu.classList.toggle('active');
-      menuToggle.classList.toggle('active');
-      
-      // Prevent body scrolling when menu is open
-      if (mobileMenu.classList.contains('active')) {
-        document.body.style.overflow = 'hidden';
-      } else {
-        document.body.style.overflow = 'auto';
+    document.addEventListener('DOMContentLoaded', function() {
+      // Typing Animation
+      const typingTextElement = document.querySelector(".typing-text");
+      const textToType = "B. TECH STUDENT | TECH ENTHUSIAST | LEARNER | FITNESS";
+      if (typingTextElement) {
+        typingTextElement.textContent = textToType;
       }
-    }
 
-    function closeMobileMenu() {
+      // Mobile Menu
+      const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
       const mobileMenu = document.getElementById('mobileMenu');
-      const menuToggle = document.querySelector('.mobile-menu-toggle');
-      
-      mobileMenu.classList.remove('active');
-      menuToggle.classList.remove('active');
-      document.body.style.overflow = 'auto';
-    }
+      const mobileMenuClose = document.querySelector('.mobile-menu-close');
+      const mobileNavLinks = document.querySelectorAll('.mobile-menu a');
 
-    // Close mobile menu when clicking outside (but not on hamburger or close button)
-    document.addEventListener('click', function(event) {
-      const mobileMenu = document.getElementById('mobileMenu');
-      const menuToggle = document.querySelector('.mobile-menu-toggle');
-      const closeButton = document.querySelector('.mobile-menu-close');
-      
-      if (mobileMenu.classList.contains('active') && 
-          !mobileMenu.contains(event.target) && 
-          !menuToggle.contains(event.target) &&
-          !closeButton.contains(event.target)) {
-        closeMobileMenu();
-      }
-    });
-
-    // Close mobile menu on Escape key
-    document.addEventListener('keydown', function(event) {
-      if (event.key === 'Escape') {
-        const mobileMenu = document.getElementById('mobileMenu');
-        if (mobileMenu.classList.contains('active')) {
-          closeMobileMenu();
+      function openMobileMenu() {
+        if (mobileMenu && mobileMenuToggle) {
+          mobileMenu.classList.add('active');
+          mobileMenuToggle.classList.add('active');
+          document.body.style.overflow = 'hidden';
         }
       }
-    });
 
-    // Close mobile menu on window resize if screen becomes larger
-    window.addEventListener('resize', function() {
-      if (window.innerWidth > 768) {
-        closeMobileMenu();
-      }
-    });
-
-    function toggleSkills() {
-      const container = document.getElementById('skillCards');
-      container.classList.toggle('show-all');
-
-      const btn = document.querySelector(".show-more-btn");
-      btn.textContent = container.classList.contains("show-all") ? "Show Less" : "Show More";
-    }
-
-    // Add smooth scrolling enhancement
-    document.querySelectorAll('nav a, .mobile-menu a').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          target.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-          });
-        }
-      });
-    });
-
-    // Add scroll-based animations
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px'
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.style.opacity = '1';
-          entry.target.style.transform = 'translateY(0)';
-        }
-      });
-    }, observerOptions);
-
-    // Observe all cards and project cards
-    document.querySelectorAll('.card, .project-card').forEach(el => {
-      el.style.opacity = '0';
-      el.style.transform = 'translateY(30px)';
-      el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-      observer.observe(el);
-    });
-
-    // Modal Functions
-    function openModal(modalId) {
-      const modal = document.getElementById(modalId);
-      modal.classList.add('show');
-      document.body.style.overflow = 'hidden'; // Prevent background scrolling
-    }
-
-    function closeModal(modalId) {
-      const modal = document.getElementById(modalId);
-      modal.classList.remove('show');
-      document.body.style.overflow = 'auto'; // Restore scrolling
-    }
-
-    // Close modal when clicking outside of it
-    window.onclick = function(event) {
-      if (event.target.classList.contains('modal')) {
-        event.target.classList.remove('show');
-        document.body.style.overflow = 'auto';
-      }
-    }
-
-    // Close modal with Escape key
-    document.addEventListener('keydown', function(event) {
-      if (event.key === 'Escape') {
-        const openModal = document.querySelector('.modal.show');
-        if (openModal) {
-          openModal.classList.remove('show');
+      function closeMobileMenu() {
+        if (mobileMenu && mobileMenuToggle) {
+          mobileMenu.classList.remove('active');
+          mobileMenuToggle.classList.remove('active');
           document.body.style.overflow = 'auto';
         }
       }
+
+      if (mobileMenuToggle) {
+        mobileMenuToggle.addEventListener('click', openMobileMenu);
+      }
+      if (mobileMenuClose) {
+        mobileMenuClose.addEventListener('click', closeMobileMenu);
+      }
+      mobileNavLinks.forEach(link => {
+        link.addEventListener('click', closeMobileMenu);
+      });
+
+      // Show More Skills
+      const showMoreSkillsBtn = document.getElementById('showMoreSkillsBtn');
+      if (showMoreSkillsBtn) {
+        showMoreSkillsBtn.addEventListener('click', function() {
+          const container = document.getElementById('skillCards');
+          if (container) {
+            container.classList.toggle('show-all');
+            this.textContent = container.classList.contains("show-all") ? "Show Less" : "Show More";
+          }
+        });
+      }
+
+      // Smooth Scrolling
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const targetId = this.getAttribute('href');
+          const target = document.querySelector(targetId);
+          if (target) {
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        });
+      });
+
+      // Intersection Observer for Animations
+      const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
+      const observer = new IntersectionObserver((entries, observerInstance) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+            observerInstance.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll('.card, .project-card, .about-me').forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(30px)';
+        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        observer.observe(el);
+      });
+
+      // Modal Logic
+      const openModalBtns = document.querySelectorAll('.more-info-btn');
+      const closeModalBtns = document.querySelectorAll('.modal .close');
+
+      function openModal(modalId) {
+        const modal = document.getElementById(modalId);
+        if (modal) {
+          modal.classList.add('show');
+          document.body.style.overflow = 'hidden';
+        }
+      }
+
+      function closeModal(modalId) {
+        const modal = document.getElementById(modalId);
+        if (modal) {
+          modal.classList.remove('show');
+          document.body.style.overflow = 'auto';
+        }
+      }
+
+      openModalBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          openModal(btn.dataset.modalId);
+        });
+      });
+
+      closeModalBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          closeModal(btn.dataset.modalId);
+        });
+      });
+
+      window.addEventListener('click', function(event) {
+        if (event.target.classList.contains('modal')) {
+          closeModal(event.target.id);
+        }
+      });
+
+      window.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape') {
+          const openModalEl = document.querySelector('.modal.show');
+          if (openModalEl) {
+            closeModal(openModalEl.id);
+          }
+        }
+      });
     });
   </script>
 
