@@ -4,12 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Portfolio of Biran Subba, a B.Tech CSE student and full-stack developer passionate about building impactful digital solutions.">
-  <meta name="keywords" content="Biran Subba, portfolio, web developer, full-stack, Sikkim Manipal, tech enthusiast">
-  <meta name="author" content="Biran Subba">
   <title>Biran Subba | Portfolio</title>
-  <link rel="preload" href="allfiles/biran.png" as="image">
-  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <style>
     * {
@@ -20,21 +15,11 @@
     html {
       scroll-behavior: smooth;
     }
-    :root {
-      --bg-color: #0a0a0a;
-      --text-color: white;
-      --card-bg: rgba(255, 255, 255, 0.08);
-    }
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      color: var(--text-color);
-      background-color: var(--bg-color);
+      color: white;
+      background-color: #0a0a0a;
       line-height: 1.6;
-    }
-    body.light-mode {
-      --bg-color: #f5f5f5;
-      --text-color: #333;
-      --card-bg: rgba(0, 0, 0, 0.08);
     }
     nav {
       position: fixed;
@@ -54,7 +39,7 @@
       align-items: center;
       gap: 12px;
       text-decoration: none;
-      color: var(--text-color);
+      color: white;
       font-weight: 700;
       font-size: 1.4rem;
       transition: all 0.3s ease;
@@ -86,7 +71,7 @@
       align-items: center;
     }
     nav a:not(.logo) {
-      color: var(--text-color);
+      color: white;
       text-decoration: none;
       margin: 0 25px;
       font-weight: 600;
@@ -115,17 +100,6 @@
     nav a:not(.logo):hover::after {
       width: 80%;
     }
-    .theme-toggle {
-      background: none;
-      border: none;
-      color: var(--text-color);
-      font-size: 1.5rem;
-      cursor: pointer;
-      transition: all 0.3s ease;
-    }
-    .theme-toggle:hover {
-      color: #ff5e00;
-    }
     .mobile-menu-toggle {
       display: none;
       flex-direction: column;
@@ -136,7 +110,7 @@
     .hamburger-line {
       width: 25px;
       height: 3px;
-      background: var(--text-color);
+      background: white;
       margin: 3px 0;
       transition: all 0.3s ease;
       border-radius: 2px;
@@ -347,12 +321,6 @@
         radial-gradient(ellipse at top right, rgba(255, 20, 147, 0.3) 0%, transparent 50%),
         radial-gradient(ellipse at center, rgba(128, 0, 128, 0.2) 0%, #0a0a0a 70%);
     }
-    .testimonials {
-      background:
-        radial-gradient(ellipse at top left, rgba(255, 94, 0, 0.3) 0%, transparent 50%),
-        radial-gradient(ellipse at bottom right, rgba(255, 179, 71, 0.3) 0%, transparent 50%),
-        radial-gradient(ellipse at center, rgba(0, 0, 0, 0.8) 0%, #0a0a0a 70%);
-    }
     .contact {
       background:
         radial-gradient(ellipse at bottom right, rgba(50, 205, 50, 0.4) 0%, transparent 50%),
@@ -457,7 +425,7 @@
       }
     }
     .about-content {
-      background: var(--card-bg);
+      background: rgba(255, 255, 255, 0.08);
       backdrop-filter: blur(15px);
       border: 1px solid rgba(255, 255, 255, 0.1);
       border-radius: 25px;
@@ -515,7 +483,7 @@
       border: 1px solid rgba(255, 94, 0, 0.3);
       border-radius: 15px;
       transition: all 0.3s ease;
-      color: var(--text-color);
+      color: white;
       font-weight: 600;
     }
     .highlight-item:hover {
@@ -537,7 +505,7 @@
       width: 100%;
     }
     .card {
-      background: var(--card-bg);
+      background: rgba(255, 255, 255, 0.08);
       padding: 30px 25px;
       border-radius: 20px;
       box-shadow:
@@ -545,7 +513,7 @@
         inset 0 1px 0 rgba(255, 255, 255, 0.1);
       backdrop-filter: blur(10px);
       border: 1px solid rgba(255, 255, 255, 0.1);
-      color: var(--text-color);
+      color: white;
       transition: all 0.4s ease, opacity 0.6s ease, transform 0.6s ease;
       text-align: center;
       display: flex;
@@ -569,7 +537,7 @@
     }
     .card:hover {
       transform: translateY(-10px) scale(1.02);
-      background: var(--card-bg);
+      background: rgba(255, 255, 255, 0.1);
       box-shadow:
         0 20px 40px rgba(0, 0, 0, 0.4),
         0 0 20px rgba(255, 94, 0, 0.3);
@@ -583,11 +551,6 @@
     .card:hover .skill-icon {
       transform: scale(1.2) rotate(10deg);
       color: #ffb347;
-    }
-    .card p {
-      color: #ddd;
-      font-size: 0.9rem;
-      margin-top: 5px;
     }
     .show-more-btn {
       margin: 30px auto;
@@ -636,7 +599,7 @@
       width: 100%;
     }
     .project-card {
-      background: var(--card-bg);
+      background: rgba(255, 255, 255, 0.08);
       border-radius: 20px;
       overflow: hidden;
       box-shadow:
@@ -683,7 +646,7 @@
     }
     .project-content h3 {
       margin-bottom: 15px;
-      color: var(--text-color);
+      color: white;
       font-size: 1.3rem;
       font-weight: 600;
     }
@@ -716,20 +679,6 @@
       box-shadow: 0 6px 20px rgba(255, 94, 0, 0.4);
       background: linear-gradient(45deg, #ffb347, #ff5e00);
     }
-    .testimonials .card {
-      padding: 25px;
-      text-align: left;
-    }
-    .testimonials .card p {
-      font-style: italic;
-      color: #ddd;
-      margin-bottom: 15px;
-    }
-    .testimonials .card h3 {
-      color: #ff5e00;
-      font-size: 1.1rem;
-      font-weight: 600;
-    }
     .contact p {
       font-size: 1.2rem;
       margin: 15px 0;
@@ -748,16 +697,16 @@
       align-items: center;
       gap: 12px;
       padding: 15px 25px;
-      background: var(--card-bg);
+      background: rgba(255, 255, 255, 0.08);
       backdrop-filter: blur(10px);
       border: 1px solid rgba(255, 255, 255, 0.1);
       border-radius: 25px;
-      color: var(--text-color);
+      color: white;
       text-decoration: none;
       font-weight: 600;
       font-size: 1rem;
       transition: all 0.4s ease;
-      position: relative;
+      position: Concrete;
       overflow: hidden;
       min-width: 120px;
       justify-content: center;
@@ -775,13 +724,9 @@
     .social-link:hover::before {
       left: 100%;
     }
-    .social-link i {
-      font-size: 1.5rem;
-      transition: all 0.3s ease;
-    }
     .social-link:hover {
       transform: translateY(-5px) scale(1.05);
-      background: var(--card-bg);
+      background: rgba(255, 255, 255, 0.1);
       box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
     }
     .social-link:hover:nth-child(1) {
@@ -814,98 +759,9 @@
       border-color: rgba(114, 137, 218, 0.5);
       box-shadow: 0 15px 35px rgba(114, 137, 218, 0.3);
     }
-    .contact-form {
-      max-width: 600px;
-      margin: 20px auto;
-    }
-    .contact-form input,
-    .contact-form textarea {
-      width: 100%;
-      padding: 12px;
-      margin: 10px 0;
-      border: 1px solid rgba(255, 94, 0, 0.3);
-      border-radius: 10px;
-      background: var(--card-bg);
-      color: var(--text-color);
-      font-size: 1rem;
-    }
-    .contact-form textarea {
-      min-height: 150px;
-      resize: vertical;
-    }
-    .contact-form button {
-      background: linear-gradient(45deg, #ff5e00, #ffb347);
-      border: none;
-      padding: 12px 30px;
-      border-radius: 25px;
-      color: white;
-      font-weight: 700;
-      cursor: pointer;
+    .social-link i {
+      font-size: 1.5rem;
       transition: all 0.3s ease;
-    }
-    .contact-form button:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 8px 20px rgba(255, 94, 0, 0.5);
-    }
-    .resume-btn {
-      display: inline-block;
-      margin: 20px auto;
-      padding: 12px 30px;
-      background: linear-gradient(45deg, #ff5e00, #ffb347);
-      border: none;
-      border-radius: 25px;
-      color: white;
-      font-weight: 700;
-      font-size: 1rem;
-      text-decoration: none;
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 15px rgba(255, 94, 0, 0.3);
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-    .resume-btn:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 8px 20px rgba(255, 94, 0, 0.5);
-    }
-    .resume-btn:active {
-      transform: translateY(0);
-      box-shadow: 0 4px 10px rgba(255, 94, 0, 0.3);
-    }
-    footer {
-      background: rgba(0, 0, 0, 0.9);
-      padding: 20px 40px;
-      text-align: center;
-      border-top: 1px solid rgba(255, 94, 0, 0.3);
-    }
-    .footer-content {
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-    .footer-content p {
-      color: #ddd;
-      font-size: 0.9rem;
-      margin-bottom: 10px;
-    }
-    .footer-links {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-    }
-    .footer-links a {
-      color: var(--text-color);
-      text-decoration: none;
-      font-size: 0.9rem;
-      transition: color 0.3s ease;
-    }
-    .footer-links a:hover {
-      color: #ff5e00;
-    }
-    a, button, .mobile-menu-close, .close {
-      outline: none;
-    }
-    a:focus, button:focus, .mobile-menu-close:focus, .close:focus {
-      outline: 2px solid #ff5e00;
-      outline-offset: 2px;
     }
     @media (max-width: 768px) {
       nav {
@@ -921,9 +777,6 @@
       }
       .nav-links {
         display: none;
-      }
-      .theme-toggle {
-        font-size: 1.2rem;
       }
       .mobile-menu-toggle {
         display: flex;
@@ -977,19 +830,22 @@
       .social-link i {
         font-size: 1.3rem;
       }
-      .resume-btn {
-        padding: 10px 25px;
-        font-size: 0.9rem;
-        width: 90%;
-        max-width: 300px;
-        text-align: center;
+      .typing-text {
+        font-size: clamp(0.9rem, 2.5vw, 1.2rem);
+        max-width: 95%;
       }
-      footer {
-        padding: 15px 20px;
+      .profile-img {
+        width: clamp(200px, 20vw, 250px);
+        height: clamp(200px, 20vw, 250px);
       }
-      .footer-links {
-        flex-direction: column;
-        gap: 10px;
+      .about-content {
+        padding: 30px 20px;
+      }
+      .about-content p {
+        font-size: 1rem;
+      }
+      .about-highlights {
+        grid-template-columns: 1fr;
       }
     }
     @media (min-width: 1200px) {
@@ -1052,7 +908,6 @@
         0 25px 50px rgba(0, 0, 0, 0.5),
         0 0 50px rgba(255, 94, 0, 0.2);
       animation: slideIn 0.4s ease;
-      position: relative;
     }
     @keyframes slideIn {
       from {
@@ -1095,7 +950,7 @@
     }
     .modal-body {
       padding: 30px;
-      color: var(--text-color);
+      color: white;
       overflow-y: auto;
       max-height: calc(90vh - 87px);
     }
@@ -1130,26 +985,6 @@
       border-radius: 15px;
       font-size: 0.9rem;
       color: #ffb347;
-    }
-    .project-links {
-      display: flex;
-      gap: 15px;
-      margin-top: 25px;
-      flex-wrap: wrap;
-    }
-    .project-links a {
-      background: linear-gradient(45deg, #ff5e00, #ffb347);
-      color: white;
-      text-decoration: none;
-      padding: 10px 20px;
-      border-radius: 25px;
-      font-weight: 600;
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 15px rgba(255, 94, 0, 0.3);
-    }
-    .project-links a:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(255, 94, 0, 0.4);
     }
     .close {
       position: absolute;
@@ -1189,17 +1024,11 @@
         padding: 20px;
         max-height: calc(95vh - 77px);
       }
-      .project-links {
-        flex-direction: column;
-      }
-      .project-links a {
-        text-align: center;
-      }
     }
   </style>
 </head>
 <body>
-  <nav role="navigation" aria-label="Main navigation">
+  <nav>
     <a href="#home" class="logo">
       <div class="logo-icon"></div>
       <span>BE THE BEST</span>
@@ -1210,7 +1039,6 @@
       <a href="#projects">Projects</a>
       <a href="#contact">Contact</a>
     </div>
-    <button class="theme-toggle" aria-label="Switch to light mode"><i class="fas fa-moon"></i></button>
     <div class="mobile-menu-toggle">
       <div class="hamburger-line"></div>
       <div class="hamburger-line"></div>
@@ -1227,14 +1055,16 @@
         <i class="fas fa-times"></i>
       </div>
     </div>
-    
+    <div style="color: rgba(255, 255, 255, 0.7); font-size: 0.9rem; margin-bottom: 20px; text-align: center;">
+      Tap the <i class="fas fa-times" style="color: #ff5e00;"></i> button above or tap outside to close
+    </div>
     <a href="#home"><i class="fas fa-home" style="margin-right: 10px;"></i>Home</a>
     <a href="#skills"><i class="fas fa-code" style="margin-right: 10px;"></i>Skills</a>
     <a href="#projects"><i class="fas fa-project-diagram" style="margin-right: 10px;"></i>Projects</a>
     <a href="#contact"><i class="fas fa-envelope" style="margin-right: 10px;"></i>Contact</a>
   </div>
-  <section id="home" class="section home" role="region" aria-label="Home">
-    <img src="allfiles/biran.png" alt="Biran Subba" class="profile-img" loading="lazy" />
+  <section id="home" class="section home">
+    <img src="allfiles/biran.png" alt="Biran Subba" class="profile-img" />
     <h1>Hello, I'm <span>Biran Subba</span></h1>
     <p class="typing-text"></p>
     <div class="about-me">
@@ -1252,29 +1082,29 @@
       </div>
     </div>
   </section>
-  <section id="skills" class="section skills" role="region" aria-label="Skills">
+  <section id="skills" class="section skills">
     <h2>My Skills</h2>
     <div class="card-container" id="skillCards">
-      <div class="card"><i class="fab fa-html5 skill-icon"></i><h3>HTML</h3><p>Intermediate</p></div>
-      <div class="card"><i class="fab fa-css3-alt skill-icon"></i><h3>CSS</h3><p>Intermediate</p></div>
-      <div class="card"><i class="fab fa-js skill-icon"></i><h3>JavaScript</h3><p>Intermediate</p></div>
-      <div class="card"><i class="fab fa-node skill-icon"></i><h3>Node.js</h3><p>Intermediate</p></div>
-      <div class="card"><i class="fas fa-database skill-icon"></i><h3>MySQL</h3><p>Beginner</p></div>
-      <div class="card"><i class="fab fa-python skill-icon"></i><h3>Python</h3><p>Intermediate</p></div>
-      <div class="card"><i class="fas fa-pencil-ruler skill-icon"></i><h3>UI/UX</h3><p>Intermediate</p></div>
-      <div class="card"><i class="fab fa-wordpress-simple skill-icon"></i><h3>WordPress</h3><p>advanced(1+ yrs exp)</p></div>
+      <div class="card"><i class="fab fa-html5 skill-icon"></i><h3>HTML</h3></div>
+      <div class="card"><i class="fab fa-css3-alt skill-icon"></i><h3>CSS</h3></div>
+      <div class="card"><i class="fab fa-js skill-icon"></i><h3>JavaScript</h3></div>
+      <div class="card"><i class="fab fa-node skill-icon"></i><h3>Node.js</h3></div>
+      <div class="card"><i class="fas fa-database skill-icon"></i><h3>MySQL</h3></div>
+      <div class="card"><i class="fab fa-python skill-icon"></i><h3>Python</h3></div>
+      <div class="card"><i class="fas fa-pencil-ruler skill-icon"></i><h3>UI/UX</h3></div>
+      <div class="card"><i class="fab fa-wordpress-simple skill-icon"></i><h3>WordPress</h3></div>
       <div class="card">
-        <div style="display: flex; justify-content: center;"><img src="https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg" alt="Figma" class="skill-icon" style="height: 3rem;" loading="lazy" /></div>
-        <h3>Figma</h3><p>Beginner</p>
+        <div style="display: flex; justify-content: center;"><img src="https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg" alt="Figma" class="skill-icon" style="height: 3rem;" /></div>
+        <h3>Figma</h3>
       </div>
     </div>
     <button class="show-more-btn" id="showMoreSkillsBtn" aria-label="Show more skills">Show More</button>
   </section>
-  <section id="projects" class="section projects" role="region" aria-label="Projects">
+  <section id="projects" class="section projects">
     <h2>Projects</h2>
     <div class="projects-container">
       <div class="project-card">
-        <img src="allfiles/dental.png" alt="Karma Dental Care" loading="lazy">
+        <img src="allfiles/dental.png" alt="Karma Dental Care">
         <div class="project-content">
           <h3>📱 Karma Dental Care</h3>
           <p>Built a full clinic website UI and deployed it using WordPress with responsive design and modern aesthetics.</p>
@@ -1285,7 +1115,7 @@
         </div>
       </div>
       <div class="project-card">
-        <img src="allfiles/todo .png" alt="To-Do App" loading="lazy">
+        <img src="allfiles/todo.png" alt="To-Do App">
         <div class="project-content">
           <h3>📝 Task Manager</h3>
           <p>Daily, weekly, monthly planning app using React and Node.js with advanced task organization features.</p>
@@ -1296,7 +1126,7 @@
         </div>
       </div>
       <div class="project-card">
-        <img src="allfiles/digital.png" alt="Digital Assistant" loading="lazy">
+        <img src="allfiles/digital.png" alt="Digital Assistant">
         <div class="project-content">
           <h3>📱 Digital Student Assistant</h3>
           <p>Comprehensive student data management system with posts, timetable & attendance tracking (ongoing project).</p>
@@ -1308,8 +1138,7 @@
       </div>
     </div>
   </section>
- 
-  <section id="contact" class="section contact" role="region" aria-label="Contact">
+  <section id="contact" class="section contact">
     <h2>Contact Me</h2>
     <p>📧 Email: <a href="mailto:biransubba124@gmail.com" style="color: #ffb347; text-decoration: none;">biransubba124@gmail.com</a></p>
     <div class="social-links">
@@ -1320,22 +1149,8 @@
       <a href="https://facebook.com/biransubba" target="_blank" rel="noopener noreferrer" class="social-link"><i class="fab fa-facebook"></i><span>Facebook</span></a>
       <a href="https://discord.gg/yourserver" target="_blank" rel="noopener noreferrer" class="social-link"><i class="fab fa-discord"></i><span>Discord</span></a>
     </div>
-   
-    
     <p style="margin-top: 30px;">Let's connect and build something amazing together!</p>
   </section>
-  <footer>
-    <div class="footer-content">
-      <p>&copy; 2025 Biran Subba. All rights reserved.</p>
-      <div class="footer-links">
-        <a href="#home">Home</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-       
-        <a href="#contact">Contact</a>
-      </div>
-    </div>
-  </footer>
   <div id="dental-info-modal" class="modal">
     <div class="modal-content">
       <div class="modal-header">
@@ -1343,7 +1158,7 @@
         <span class="close" data-modal-id="dental-info-modal">&times;</span>
       </div>
       <div class="modal-body">
-        <img src="allfiles/dental.png" alt="Karma Dental Care Details" loading="lazy">
+        <img src="allfiles/dental.png" alt="Karma Dental Care Details">
         <h3>Developed with WordPress</h3>
         <p>My first UI project was the complete design and development of the Karma Dental Care website using WordPress, focusing on a responsive and user-friendly experience.</p>
         <h3>Key Features</h3>
@@ -1357,10 +1172,6 @@
         <div class="tech-stack">
           <span class="tech-tag">WordPress</span><span class="tech-tag">HTML5</span><span class="tech-tag">CSS3</span><span class="tech-tag">JavaScript</span><span class="tech-tag">PHP</span><span class="tech-tag">MySQL</span>
         </div>
-        <div class="project-links">
-          <a href="https://github.com/biransubba/karma-dental-care" target="_blank">View Code</a>
-          <a href="https://karmadentalcare.com" target="_blank">Live Demo</a>
-        </div>
       </div>
     </div>
   </div>
@@ -1371,7 +1182,7 @@
         <span class="close" data-modal-id="todo-info-modal">&times;</span>
       </div>
       <div class="modal-body">
-        <img src="allfiles/todo.png" alt="Task Manager Development" loading="lazy">
+        <img src="allfiles/todo.png" alt="Task Manager Development">
         <h3>Project Overview</h3>
         <p>A comprehensive task management application built with React, that helps users organize their daily, weekly, and monthly tasks.</p>
         <h3>Key Features</h3>
@@ -1389,10 +1200,6 @@
         <p>• Calendar integration with Google/Outlook</p>
         <p>• Mobile app development (React Native)</p>
         <p>• Advanced analytics dashboard</p>
-        <div class="project-links">
-          <a href="https://github.com/biransubba/task-manager" target="_blank">View Code</a>
-          <a href="https://your-taskmanager-demo.com" target="_blank">Live Demo</a>
-        </div>
       </div>
     </div>
   </div>
@@ -1403,7 +1210,7 @@
         <span class="close" data-modal-id="digital-info-modal">&times;</span>
       </div>
       <div class="modal-body">
-        <img src="allfiles/digital.png" alt="Digital Assistant Evolution" loading="lazy">
+        <img src="allfiles/digital.png" alt="Digital Assistant Evolution">
         <h3>About this project</h3>
         <p>This is a part of our Project-Based Learning work that my friend and I are building together to enhance our practical skills.</p>
         <h3>Project Vision</h3>
@@ -1429,10 +1236,6 @@
         <p><strong>Phase 2 (Current):</strong> Advanced features and mobile optimization</p>
         <p><strong>Phase 3 (Planned):</strong> AI integration and advanced analytics</p>
         <p><strong>Phase 4 (Future):</strong> Cross-institution compatibility</p>
-        <div class="project-links">
-          <a href="https://github.com/biransubba/digital-student-assistant" target="_blank">View Code</a>
-          <a href="https://your-student-assistant-demo.com" target="_blank">Live Demo</a>
-        </div>
       </div>
     </div>
   </div>
@@ -1496,17 +1299,6 @@
         });
       }
 
-      // Theme Toggle
-      const themeToggle = document.querySelector('.theme-toggle');
-      if (themeToggle) {
-        themeToggle.addEventListener('click', () => {
-          document.body.classList.toggle('light-mode');
-          const isLightMode = document.body.classList.contains('light-mode');
-          themeToggle.innerHTML = isLightMode ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
-          themeToggle.setAttribute('aria-label', isLightMode ? 'Switch to dark mode' : 'Switch to light mode');
-        });
-      }
-
       // Smooth Scrolling Logic
       document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
@@ -1518,11 +1310,7 @@
               closeMobileMenu();
             }
             setTimeout(() => {
-              const navHeight = document.querySelector('nav').offsetHeight;
-              window.scrollTo({
-                top: target.getBoundingClientRect().top + window.pageYOffset - navHeight - 20,
-                behavior: 'smooth'
-              });
+              target.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }, 300);
           }
         });
@@ -1597,4 +1385,3 @@
   </script>
 </body>
 </html>
-```
