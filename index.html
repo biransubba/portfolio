@@ -1,13 +1,17 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Portfolio of Biran Subba, a B.Tech CSE student and full-stack developer passionate about building impactful digital solutions.">
+  <meta name="keywords" content="Biran Subba, portfolio, web developer, full-stack, Sikkim Manipal, tech enthusiast">
+  <meta name="author" content="Biran Subba">
   <title>Biran Subba | Portfolio</title>
+  <link rel="preload" href="allfiles/biran.png" as="image">
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-
   <style>
-    /* Your existing CSS goes here - no changes needed */
     * {
       margin: 0;
       padding: 0;
@@ -16,11 +20,21 @@
     html {
       scroll-behavior: smooth;
     }
+    :root {
+      --bg-color: #0a0a0a;
+      --text-color: white;
+      --card-bg: rgba(255, 255, 255, 0.08);
+    }
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      color: white;
-      background-color: #0a0a0a;
+      color: var(--text-color);
+      background-color: var(--bg-color);
       line-height: 1.6;
+    }
+    body.light-mode {
+      --bg-color: #f5f5f5;
+      --text-color: #333;
+      --card-bg: rgba(0, 0, 0, 0.08);
     }
     nav {
       position: fixed;
@@ -40,7 +54,7 @@
       align-items: center;
       gap: 12px;
       text-decoration: none;
-      color: white;
+      color: var(--text-color);
       font-weight: 700;
       font-size: 1.4rem;
       transition: all 0.3s ease;
@@ -72,7 +86,7 @@
       align-items: center;
     }
     nav a:not(.logo) {
-      color: white;
+      color: var(--text-color);
       text-decoration: none;
       margin: 0 25px;
       font-weight: 600;
@@ -101,7 +115,17 @@
     nav a:not(.logo):hover::after {
       width: 80%;
     }
-    /* Mobile Menu Styles */
+    .theme-toggle {
+      background: none;
+      border: none;
+      color: var(--text-color);
+      font-size: 1.5rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .theme-toggle:hover {
+      color: #ff5e00;
+    }
     .mobile-menu-toggle {
       display: none;
       flex-direction: column;
@@ -112,7 +136,7 @@
     .hamburger-line {
       width: 25px;
       height: 3px;
-      background: #fff;
+      background: var(--text-color);
       margin: 3px 0;
       transition: all 0.3s ease;
       border-radius: 2px;
@@ -323,6 +347,12 @@
         radial-gradient(ellipse at top right, rgba(255, 20, 147, 0.3) 0%, transparent 50%),
         radial-gradient(ellipse at center, rgba(128, 0, 128, 0.2) 0%, #0a0a0a 70%);
     }
+    .testimonials {
+      background:
+        radial-gradient(ellipse at top left, rgba(255, 94, 0, 0.3) 0%, transparent 50%),
+        radial-gradient(ellipse at bottom right, rgba(255, 179, 71, 0.3) 0%, transparent 50%),
+        radial-gradient(ellipse at center, rgba(0, 0, 0, 0.8) 0%, #0a0a0a 70%);
+    }
     .contact {
       background:
         radial-gradient(ellipse at bottom right, rgba(50, 205, 50, 0.4) 0%, transparent 50%),
@@ -409,7 +439,6 @@
     @keyframes blink {
       50% { border-color: transparent; }
     }
-    /* About Me Styles */
     .about-me {
       margin-top: 50px;
       max-width: 800px;
@@ -428,7 +457,7 @@
       }
     }
     .about-content {
-      background: rgba(255, 255, 255, 0.08);
+      background: var(--card-bg);
       backdrop-filter: blur(15px);
       border: 1px solid rgba(255, 255, 255, 0.1);
       border-radius: 25px;
@@ -486,7 +515,7 @@
       border: 1px solid rgba(255, 94, 0, 0.3);
       border-radius: 15px;
       transition: all 0.3s ease;
-      color: white;
+      color: var(--text-color);
       font-weight: 600;
     }
     .highlight-item:hover {
@@ -508,7 +537,7 @@
       width: 100%;
     }
     .card {
-      background: rgba(255, 255, 255, 0.08);
+      background: var(--card-bg);
       padding: 30px 25px;
       border-radius: 20px;
       box-shadow:
@@ -516,8 +545,8 @@
         inset 0 1px 0 rgba(255, 255, 255, 0.1);
       backdrop-filter: blur(10px);
       border: 1px solid rgba(255, 255, 255, 0.1);
-      color: white;
-      transition: all 0.4s ease;
+      color: var(--text-color);
+      transition: all 0.4s ease, opacity 0.6s ease, transform 0.6s ease;
       text-align: center;
       display: flex;
       flex-direction: column;
@@ -540,7 +569,7 @@
     }
     .card:hover {
       transform: translateY(-10px) scale(1.02);
-      background: rgba(255, 255, 255, 0.15);
+      background: var(--card-bg);
       box-shadow:
         0 20px 40px rgba(0, 0, 0, 0.4),
         0 0 20px rgba(255, 94, 0, 0.3);
@@ -555,23 +584,49 @@
       transform: scale(1.2) rotate(10deg);
       color: #ffb347;
     }
+    .card p {
+      color: #ddd;
+      font-size: 0.9rem;
+      margin-top: 5px;
+    }
     .show-more-btn {
-      margin-top: 30px;
-      padding: 12px 24px;
+      margin: 30px auto;
+      padding: 12px 30px;
       background: linear-gradient(45deg, #ff5e00, #ffb347);
       border: none;
       border-radius: 25px;
       color: white;
-      font-weight: bold;
+      font-weight: 700;
       font-size: 1rem;
       cursor: pointer;
       transition: all 0.3s ease;
       box-shadow: 0 4px 15px rgba(255, 94, 0, 0.3);
       display: none;
+      position: relative;
+      overflow: hidden;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .show-more-btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+      transition: left 0.5s ease;
+    }
+    .show-more-btn:hover::before {
+      left: 100%;
     }
     .show-more-btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(255, 94, 0, 0.4);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(255, 94, 0, 0.5);
+    }
+    .show-more-btn:active {
+      transform: translateY(0);
+      box-shadow: 0 4px 10px rgba(255, 94, 0, 0.3);
     }
     .projects-container {
       display: grid;
@@ -581,7 +636,7 @@
       width: 100%;
     }
     .project-card {
-      background: rgba(255, 255, 255, 0.08);
+      background: var(--card-bg);
       border-radius: 20px;
       overflow: hidden;
       box-shadow:
@@ -628,7 +683,7 @@
     }
     .project-content h3 {
       margin-bottom: 15px;
-      color: #fff;
+      color: var(--text-color);
       font-size: 1.3rem;
       font-weight: 600;
     }
@@ -661,12 +716,25 @@
       box-shadow: 0 6px 20px rgba(255, 94, 0, 0.4);
       background: linear-gradient(45deg, #ffb347, #ff5e00);
     }
+    .testimonials .card {
+      padding: 25px;
+      text-align: left;
+    }
+    .testimonials .card p {
+      font-style: italic;
+      color: #ddd;
+      margin-bottom: 15px;
+    }
+    .testimonials .card h3 {
+      color: #ff5e00;
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
     .contact p {
       font-size: 1.2rem;
       margin: 15px 0;
       color: #ddd;
     }
-    /* Social Links Styles */
     .social-links {
       display: flex;
       flex-wrap: wrap;
@@ -680,11 +748,11 @@
       align-items: center;
       gap: 12px;
       padding: 15px 25px;
-      background: rgba(255, 255, 255, 0.08);
+      background: var(--card-bg);
       backdrop-filter: blur(10px);
       border: 1px solid rgba(255, 255, 255, 0.1);
       border-radius: 25px;
-      color: white;
+      color: var(--text-color);
       text-decoration: none;
       font-weight: 600;
       font-size: 1rem;
@@ -713,10 +781,9 @@
     }
     .social-link:hover {
       transform: translateY(-5px) scale(1.05);
-      background: rgba(255, 255, 255, 0.15);
+      background: var(--card-bg);
       box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
     }
-    /* Individual social platform colors */
     .social-link:hover:nth-child(1) {
       background: linear-gradient(45deg, rgba(51, 51, 51, 0.3), rgba(102, 102, 102, 0.2));
       border-color: rgba(51, 51, 51, 0.5);
@@ -747,7 +814,99 @@
       border-color: rgba(114, 137, 218, 0.5);
       box-shadow: 0 15px 35px rgba(114, 137, 218, 0.3);
     }
-    /* Enhanced Mobile Responsiveness */
+    .contact-form {
+      max-width: 600px;
+      margin: 20px auto;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid rgba(255, 94, 0, 0.3);
+      border-radius: 10px;
+      background: var(--card-bg);
+      color: var(--text-color);
+      font-size: 1rem;
+    }
+    .contact-form textarea {
+      min-height: 150px;
+      resize: vertical;
+    }
+    .contact-form button {
+      background: linear-gradient(45deg, #ff5e00, #ffb347);
+      border: none;
+      padding: 12px 30px;
+      border-radius: 25px;
+      color: white;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .contact-form button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(255, 94, 0, 0.5);
+    }
+    .resume-btn {
+      display: inline-block;
+      margin: 20px auto;
+      padding: 12px 30px;
+      background: linear-gradient(45deg, #ff5e00, #ffb347);
+      border: none;
+      border-radius: 25px;
+      color: white;
+      font-weight: 700;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(255, 94, 0, 0.3);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .resume-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(255, 94, 0, 0.5);
+    }
+    .resume-btn:active {
+      transform: translateY(0);
+      box-shadow: 0 4px 10px rgba(255, 94, 0, 0.3);
+    }
+    footer {
+      background: rgba(0, 0, 0, 0.9);
+      padding: 20px 40px;
+      text-align: center;
+      border-top: 1px solid rgba(255, 94, 0, 0.3);
+    }
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .footer-content p {
+      color: #ddd;
+      font-size: 0.9rem;
+      margin-bottom: 10px;
+    }
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+    .footer-links a {
+      color: var(--text-color);
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.3s ease;
+    }
+    .footer-links a:hover {
+      color: #ff5e00;
+    }
+    a, button, .mobile-menu-close, .close {
+      outline: none;
+    }
+    a:focus, button:focus, .mobile-menu-close:focus, .close:focus {
+      outline: 2px solid #ff5e00;
+      outline-offset: 2px;
+    }
     @media (max-width: 768px) {
       nav {
         padding: 15px 20px;
@@ -763,6 +922,9 @@
       .nav-links {
         display: none;
       }
+      .theme-toggle {
+        font-size: 1.2rem;
+      }
       .mobile-menu-toggle {
         display: flex;
       }
@@ -773,18 +935,29 @@
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         gap: 20px;
       }
-      .projects-container {
-        grid-template-columns: 1fr;
-        gap: 30px;
-      }
       .card-container .card:nth-child(n+5) {
         display: none;
+        opacity: 0;
+        transform: translateY(20px);
       }
       .card-container.show-all .card {
         display: flex;
+        opacity: 1;
+        transform: translateY(0);
       }
       .show-more-btn {
-        display: inline-block;
+        display: block;
+        padding: 10px 25px;
+        font-size: 0.9rem;
+        width: 90%;
+        max-width: 300px;
+        margin: 20px auto;
+        text-align: center;
+        touch-action: manipulation;
+      }
+      .projects-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
       }
       .project-buttons {
         flex-direction: column;
@@ -792,7 +965,6 @@
       .project-buttons button {
         max-width: none;
       }
-      /* Mobile Social Links */
       .social-links {
         gap: 15px;
         margin: 25px 0;
@@ -805,8 +977,21 @@
       .social-link i {
         font-size: 1.3rem;
       }
+      .resume-btn {
+        padding: 10px 25px;
+        font-size: 0.9rem;
+        width: 90%;
+        max-width: 300px;
+        text-align: center;
+      }
+      footer {
+        padding: 15px 20px;
+      }
+      .footer-links {
+        flex-direction: column;
+        gap: 10px;
+      }
     }
-    /* Desktop Enhancements */
     @media (min-width: 1200px) {
       .section {
         padding: 120px 60px 100px;
@@ -825,14 +1010,12 @@
         font-size: 3.5rem;
       }
     }
-    /* Ultra-wide screen support */
     @media (min-width: 1600px) {
       .card-container,
       .projects-container {
         max-width: 1800px;
       }
     }
-    /* Modal Styles */
     .modal {
       display: none;
       position: fixed;
@@ -912,9 +1095,9 @@
     }
     .modal-body {
       padding: 30px;
-      color: white;
+      color: var(--text-color);
       overflow-y: auto;
-      max-height: calc(90vh - 200px);
+      max-height: calc(90vh - 87px);
     }
     .modal-body img {
       width: 100%;
@@ -990,7 +1173,6 @@
       background: rgba(255, 255, 255, 0.2);
       transform: scale(1.1);
     }
-    /* Mobile Modal Adjustments */
     @media (max-width: 768px) {
       .modal-content {
         margin: 10px;
@@ -1005,6 +1187,7 @@
       }
       .modal-body {
         padding: 20px;
+        max-height: calc(95vh - 77px);
       }
       .project-links {
         flex-direction: column;
@@ -1016,8 +1199,7 @@
   </style>
 </head>
 <body>
-
-  <nav>
+  <nav role="navigation" aria-label="Main navigation">
     <a href="#home" class="logo">
       <div class="logo-icon"></div>
       <span>BE THE BEST</span>
@@ -1028,13 +1210,13 @@
       <a href="#projects">Projects</a>
       <a href="#contact">Contact</a>
     </div>
+    <button class="theme-toggle" aria-label="Switch to light mode"><i class="fas fa-moon"></i></button>
     <div class="mobile-menu-toggle">
       <div class="hamburger-line"></div>
       <div class="hamburger-line"></div>
       <div class="hamburger-line"></div>
     </div>
   </nav>
-
   <div class="mobile-menu" id="mobileMenu">
     <div class="mobile-menu-header">
       <div class="mobile-menu-logo">
@@ -1045,90 +1227,56 @@
         <i class="fas fa-times"></i>
       </div>
     </div>
-
     <div style="color: rgba(255, 255, 255, 0.7); font-size: 0.9rem; margin-bottom: 20px; text-align: center;">
       Tap the <i class="fas fa-times" style="color: #ff5e00;"></i> button above or tap outside to close
     </div>
-
-    <a href="#home">
-      <i class="fas fa-home" style="margin-right: 10px;"></i>Home
-    </a>
-    <a href="#skills">
-      <i class="fas fa-code" style="margin-right: 10px;"></i>Skills
-    </a>
-    <a href="#projects">
-      <i class="fas fa-project-diagram" style="margin-right: 10px;"></i>Projects
-    </a>
-    <a href="#contact">
-      <i class="fas fa-envelope" style="margin-right: 10px;"></i>Contact
-    </a>
+    <a href="#home"><i class="fas fa-home" style="margin-right: 10px;"></i>Home</a>
+    <a href="#skills"><i class="fas fa-code" style="margin-right: 10px;"></i>Skills</a>
+    <a href="#projects"><i class="fas fa-project-diagram" style="margin-right: 10px;"></i>Projects</a>
+    <a href="#contact"><i class="fas fa-envelope" style="margin-right: 10px;"></i>Contact</a>
   </div>
-
-  <section id="home" class="section home">
-    <img src="allfiles/biran.png" alt="Biran Subba" class="profile-img" />
+  <section id="home" class="section home" role="region" aria-label="Home">
+    <img src="allfiles/biran.png" alt="Biran Subba" class="profile-img" loading="lazy" />
     <h1>Hello, I'm <span>Biran Subba</span></h1>
     <p class="typing-text"></p>
-
     <div class="about-me">
       <div class="about-content">
         <h3>About Me</h3>
-        <p>
-          Hi, I’m Biran Subba — a third-year B.Tech CSE student (2023–2027) at Sikkim Manipal Institute of Technology.
-        </p>
-        <p>
-          Passionate about tech, I love building digital solutions that make an impact. From exploring new frameworks to working on real-world projects, I enjoy pushing my skills beyond the classroom.
-        </p>
-        <p>
-          When I’m not coding, I’m either lifting at the gym or diving into the latest tech trends. I believe in balancing mind, body, and code to perform at my best.
-        </p>
+        <p>Hi, I’m Biran Subba — a third-year B.Tech CSE student (2023–2027) at Sikkim Manipal Institute of Technology.</p>
+        <p>Passionate about tech, I love building digital solutions that make an impact. From exploring new frameworks to working on real-world projects, I enjoy pushing my skills beyond the classroom.</p>
+        <p>When I’m not coding, I’m either lifting at the gym or diving into the latest tech trends. I believe in balancing mind, body, and code to perform at my best.</p>
         <div class="about-highlights">
-          <div class="highlight-item">
-            <i class="fas fa-graduation-cap"></i>
-            <span>B.Tech Student</span>
-          </div>
-          <div class="highlight-item">
-            <i class="fas fa-code"></i>
-            <span>Full-Stack Developer(learning)</span>
-          </div>
-          <div class="highlight-item">
-            <i class="fas fa-lightbulb"></i>
-            <span>Problem Solver</span>
-          </div>
-          <div class="highlight-item">
-            <i class="fas fa-dumbbell"></i>
-            <span>Fitness Enthusiast</span>
-          </div>
+          <div class="highlight-item"><i class="fas fa-graduation-cap"></i><span>B.Tech Student</span></div>
+          <div class="highlight-item"><i class="fas fa-code"></i><span>Full-Stack Developer(learning)</span></div>
+          <div class="highlight-item"><i class="fas fa-lightbulb"></i><span>Problem Solver</span></div>
+          <div class="highlight-item"><i class="fas fa-dumbbell"></i><span>Fitness Enthusiast</span></div>
         </div>
       </div>
     </div>
   </section>
-
-  <section id="skills" class="section skills">
+  <section id="skills" class="section skills" role="region" aria-label="Skills">
     <h2>My Skills</h2>
     <div class="card-container" id="skillCards">
-      <div class="card"><i class="fab fa-html5 skill-icon"></i><h3>HTML</h3></div>
-      <div class="card"><i class="fab fa-css3-alt skill-icon"></i><h3>CSS</h3></div>
-      <div class="card"><i class="fab fa-js skill-icon"></i><h3>JavaScript</h3></div>
-      <div class="card"><i class="fab fa-node skill-icon"></i><h3>Node.js</h3></div>
-      <div class="card"><i class="fas fa-database skill-icon"></i><h3>MySQL</h3></div>
-      <div class="card"><i class="fab fa-python skill-icon"></i><h3>Python</h3></div>
-      <div class="card"><i class="fas fa-pencil-ruler skill-icon"></i><h3>UI/UX</h3></div>
-      <div class="card"><i class="fab fa-wordpress-simple skill-icon"></i><h3>WordPress</h3></div>
+      <div class="card"><i class="fab fa-html5 skill-icon"></i><h3>HTML</h3><p>Intermediate</p></div>
+      <div class="card"><i class="fab fa-css3-alt skill-icon"></i><h3>CSS</h3><p>Intermediate</p></div>
+      <div class="card"><i class="fab fa-js skill-icon"></i><h3>JavaScript</h3><p>Intermediate</p></div>
+      <div class="card"><i class="fab fa-node skill-icon"></i><h3>Node.js</h3><p>Intermediate</p></div>
+      <div class="card"><i class="fas fa-database skill-icon"></i><h3>MySQL</h3><p>Beginner</p></div>
+      <div class="card"><i class="fab fa-python skill-icon"></i><h3>Python</h3><p>Intermediate</p></div>
+      <div class="card"><i class="fas fa-pencil-ruler skill-icon"></i><h3>UI/UX</h3><p>Intermediate</p></div>
+      <div class="card"><i class="fab fa-wordpress-simple skill-icon"></i><h3>WordPress</h3><p>advanced(1+ yrs exp)</p></div>
       <div class="card">
-        <div style="display: flex; justify-content: center;">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg" alt="Figma" class="skill-icon" style="height: 3rem;" />
-        </div>
-        <h3>Figma</h3>
+        <div style="display: flex; justify-content: center;"><img src="https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg" alt="Figma" class="skill-icon" style="height: 3rem;" loading="lazy" /></div>
+        <h3>Figma</h3><p>Beginner</p>
       </div>
     </div>
-    <button class="show-more-btn" id="showMoreSkillsBtn">Show More</button>
+    <button class="show-more-btn" id="showMoreSkillsBtn" aria-label="Show more skills">Show More</button>
   </section>
-
-  <section id="projects" class="section projects">
+  <section id="projects" class="section projects" role="region" aria-label="Projects">
     <h2>Projects</h2>
     <div class="projects-container">
       <div class="project-card">
-        <img src="allfiles/dental.png" alt="Karma Dental Care">
+        <img src="allfiles/dental.png" alt="Karma Dental Care" loading="lazy">
         <div class="project-content">
           <h3>📱 Karma Dental Care</h3>
           <p>Built a full clinic website UI and deployed it using WordPress with responsive design and modern aesthetics.</p>
@@ -1138,9 +1286,8 @@
           </div>
         </div>
       </div>
-
       <div class="project-card">
-        <img src="allfiles/todo .png" alt="To-Do App">
+        <img src="allfiles/todo .png" alt="To-Do App" loading="lazy">
         <div class="project-content">
           <h3>📝 Task Manager</h3>
           <p>Daily, weekly, monthly planning app using React and Node.js with advanced task organization features.</p>
@@ -1150,9 +1297,8 @@
           </div>
         </div>
       </div>
-
       <div class="project-card">
-        <img src="allfiles/digital.png" alt="Digital Assistant">
+        <img src="allfiles/digital.png" alt="Digital Assistant" loading="lazy">
         <div class="project-content">
           <h3>📱 Digital Student Assistant</h3>
           <p>Comprehensive student data management system with posts, timetable & attendance tracking (ongoing project).</p>
@@ -1164,41 +1310,34 @@
       </div>
     </div>
   </section>
-
-  <section id="contact" class="section contact">
+ 
+  <section id="contact" class="section contact" role="region" aria-label="Contact">
     <h2>Contact Me</h2>
     <p>📧 Email: <a href="mailto:biransubba124@gmail.com" style="color: #ffb347; text-decoration: none;">biransubba124@gmail.com</a></p>
-
     <div class="social-links">
-      <a href="https://github.com/biransubba" target="_blank" rel="noopener noreferrer" class="social-link">
-        <i class="fab fa-github"></i>
-        <span>GitHub</span>
-      </a>
-      <a href="https://linkedin.com/in/biransubba" target="_blank" rel="noopener noreferrer" class="social-link">
-        <i class="fab fa-linkedin"></i>
-        <span>LinkedIn</span>
-      </a>
-      <a href="https://instagram.com/b_i_r_a_n_s_u_b_b_a" target="_blank" rel="noopener noreferrer" class="social-link">
-        <i class="fab fa-instagram"></i>
-        <span>Instagram</span>
-      </a>
-      <a href="https://twitter.com/biransubba" target="_blank" rel="noopener noreferrer" class="social-link">
-        <i class="fab fa-twitter"></i>
-        <span>Twitter</span>
-      </a>
-      <a href="https://facebook.com/biransubba" target="_blank" rel="noopener noreferrer" class="social-link">
-        <i class="fab fa-facebook"></i>
-        <span>Facebook</span>
-      </a>
-      <a href="https://discord.gg/yourserver" target="_blank" rel="noopener noreferrer" class="social-link">
-        <i class="fab fa-discord"></i>
-        <span>Discord</span>
-      </a>
+      <a href="https://github.com/biransubba" target="_blank" rel="noopener noreferrer" class="social-link"><i class="fab fa-github"></i><span>GitHub</span></a>
+      <a href="https://linkedin.com/in/biransubba" target="_blank" rel="noopener noreferrer" class="social-link"><i class="fab fa-linkedin"></i><span>LinkedIn</span></a>
+      <a href="https://instagram.com/b_i_r_a_n_s_u_b_b_a" target="_blank" rel="noopener noreferrer" class="social-link"><i class="fab fa-instagram"></i><span>Instagram</span></a>
+      <a href="https://twitter.com/biransubba" target="_blank" rel="noopener noreferrer" class="social-link"><i class="fab fa-twitter"></i><span>Twitter</span></a>
+      <a href="https://facebook.com/biransubba" target="_blank" rel="noopener noreferrer" class="social-link"><i class="fab fa-facebook"></i><span>Facebook</span></a>
+      <a href="https://discord.gg/yourserver" target="_blank" rel="noopener noreferrer" class="social-link"><i class="fab fa-discord"></i><span>Discord</span></a>
     </div>
-
+   
+    
     <p style="margin-top: 30px;">Let's connect and build something amazing together!</p>
   </section>
-
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2025 Biran Subba. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+       
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </footer>
   <div id="dental-info-modal" class="modal">
     <div class="modal-content">
       <div class="modal-header">
@@ -1206,10 +1345,9 @@
         <span class="close" data-modal-id="dental-info-modal">&times;</span>
       </div>
       <div class="modal-body">
-        <img src="allfiles/dental.png" alt="Karma Dental Care Details">
-        <h3>Developed with wordpress</h3>
-        <p>My first UI project was the complete design and development of the Karma Dental Care website using WordPress, where I focused on creating a responsive and user-friendly experience. </p>
-
+        <img src="allfiles/dental.png" alt="Karma Dental Care Details" loading="lazy">
+        <h3>Developed with WordPress</h3>
+        <p>My first UI project was the complete design and development of the Karma Dental Care website using WordPress, focusing on a responsive and user-friendly experience.</p>
         <h3>Key Features</h3>
         <p>• Responsive design that works seamlessly across all devices</p>
         <p>• Online appointment booking system</p>
@@ -1217,21 +1355,17 @@
         <p>• Doctor profiles and qualifications</p>
         <p>• Patient testimonials and reviews</p>
         <p>• Contact forms and location maps</p>
-
         <h3>Technologies Used</h3>
         <div class="tech-stack">
-          <span class="tech-tag">WordPress</span>
-          <span class="tech-tag">HTML5</span>
-          <span class="tech-tag">CSS3</span>
-          <span class="tech-tag">JavaScript</span>
-          <span class="tech-tag">PHP</span>
-          <span class="tech-tag">MySQL</span>
+          <span class="tech-tag">WordPress</span><span class="tech-tag">HTML5</span><span class="tech-tag">CSS3</span><span class="tech-tag">JavaScript</span><span class="tech-tag">PHP</span><span class="tech-tag">MySQL</span>
         </div>
-
+        <div class="project-links">
+          <a href="https://github.com/biransubba/karma-dental-care" target="_blank">View Code</a>
+          <a href="https://karmadentalcare.com" target="_blank">Live Demo</a>
         </div>
+      </div>
     </div>
   </div>
-
   <div id="todo-info-modal" class="modal">
     <div class="modal-content">
       <div class="modal-header">
@@ -1239,34 +1373,31 @@
         <span class="close" data-modal-id="todo-info-modal">&times;</span>
       </div>
       <div class="modal-body">
-        <img src="allfiles/todo .png" alt="Task Manager Development">
+        <img src="allfiles/todo.png" alt="Task Manager Development" loading="lazy">
         <h3>Project Overview</h3>
         <p>A comprehensive task management application built with React, that helps users organize their daily, weekly, and monthly tasks.</p>
-
         <h3>Key Features</h3>
         <p>• Multi-level task organization (Daily/Weekly/Monthly)</p>
         <p>• Priority-based task sorting and filtering</p>
         <p>• Real-time progress tracking and analytics</p>
-
         <h3>Technologies Used</h3>
         <div class="tech-stack">
-          <span class="tech-tag">React</span>
-          <span class="tech-tag">Node.js</span>
-
+          <span class="tech-tag">React</span><span class="tech-tag">Node.js</span><span class="tech-tag">Express</span><span class="tech-tag">MongoDB</span>
         </div>
-
         <h3>Development Journey</h3>
-        <p>This project was part of my summer internship, and it has not only enhanced my development skills but also helped me organize my personal tasks more effectively.</p>
-
+        <p>This project was part of my summer internship, enhancing my skills in full-stack development and task management.</p>
         <h3>Future Enhancements</h3>
         <p>• AI-powered task prioritization</p>
         <p>• Calendar integration with Google/Outlook</p>
         <p>• Mobile app development (React Native)</p>
-        <p>• Advanced analytics and insights dashboard</p>
+        <p>• Advanced analytics dashboard</p>
+        <div class="project-links">
+          <a href="https://github.com/biransubba/task-manager" target="_blank">View Code</a>
+          <a href="https://your-taskmanager-demo.com" target="_blank">Live Demo</a>
+        </div>
       </div>
     </div>
   </div>
-
   <div id="digital-info-modal" class="modal">
     <div class="modal-content">
       <div class="modal-header">
@@ -1274,12 +1405,11 @@
         <span class="close" data-modal-id="digital-info-modal">&times;</span>
       </div>
       <div class="modal-body">
-        <img src="allfiles/digital.png" alt="Digital Assistant Evolution">
+        <img src="allfiles/digital.png" alt="Digital Assistant Evolution" loading="lazy">
         <h3>About this project</h3>
         <p>This is a part of our Project-Based Learning work that my friend and I are building together to enhance our practical skills.</p>
         <h3>Project Vision</h3>
         <p>The Digital Student Assistant aims to revolutionize how students manage their academic life by providing a centralized platform that combines academic tracking, social interaction, and administrative tasks in an intuitive interface.</p>
-
         <h3>Completed Features</h3>
         <p>• Student profile management and authentication</p>
         <p>• Interactive timetable with class scheduling</p>
@@ -1287,34 +1417,27 @@
         <p>• Social feed for student announcements and updates</p>
         <p>• Grade tracking and GPA calculation</p>
         <p>• Assignment submission portal</p>
-
         <h3>In Development</h3>
         <p>• AI-powered study recommendations</p>
         <p>• Peer-to-peer study group formation</p>
         <p>• Integration with learning management systems</p>
         <p>• Mobile application development</p>
-
         <h3>Technologies Used</h3>
         <div class="tech-stack">
-          <span class="tech-tag">React</span>
-          <span class="tech-tag">Node.js</span>
-          <span class="tech-tag">PostgreSQL</span>
-          <span class="tech-tag">Express</span>
-          <span class="tech-tag">Socket.io</span>
-          <span class="tech-tag">JWT</span>
-          <span class="tech-tag">QR Code API</span>
+          <span class="tech-tag">React</span><span class="tech-tag">Node.js</span><span class="tech-tag">PostgreSQL</span><span class="tech-tag">Express</span><span class="tech-tag">Socket.io</span><span class="tech-tag">JWT</span><span class="tech-tag">QR Code API</span>
         </div>
-
         <h3>Development Timeline</h3>
         <p><strong>Phase 1 (Completed):</strong> Core infrastructure and basic features</p>
         <p><strong>Phase 2 (Current):</strong> Advanced features and mobile optimization</p>
         <p><strong>Phase 3 (Planned):</strong> AI integration and advanced analytics</p>
         <p><strong>Phase 4 (Future):</strong> Cross-institution compatibility</p>
-
+        <div class="project-links">
+          <a href="https://github.com/biransubba/digital-student-assistant" target="_blank">View Code</a>
+          <a href="https://your-student-assistant-demo.com" target="_blank">Live Demo</a>
         </div>
+      </div>
     </div>
   </div>
-
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       // Typing Animation
@@ -1324,7 +1447,7 @@
         typingTextElement.textContent = textToType;
       }
 
-      // Mobile Menu
+      // Mobile Menu Logic
       const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
       const mobileMenu = document.getElementById('mobileMenu');
       const mobileMenuClose = document.querySelector('.mobile-menu-close');
@@ -1346,41 +1469,68 @@
         }
       }
 
-      if (mobileMenuToggle) {
-        mobileMenuToggle.addEventListener('click', openMobileMenu);
-      }
-      if (mobileMenuClose) {
-        mobileMenuClose.addEventListener('click', closeMobileMenu);
-      }
-      mobileNavLinks.forEach(link => {
-        link.addEventListener('click', closeMobileMenu);
-      });
+      if (mobileMenuToggle) mobileMenuToggle.addEventListener('click', openMobileMenu);
+      if (mobileMenuClose) mobileMenuClose.addEventListener('click', closeMobileMenu);
+      mobileNavLinks.forEach(link => link.addEventListener('click', closeMobileMenu));
 
-      // Show More Skills
+      // Show More Skills Logic
       const showMoreSkillsBtn = document.getElementById('showMoreSkillsBtn');
-      if (showMoreSkillsBtn) {
+      const skillCardsContainer = document.getElementById('skillCards');
+
+      if (showMoreSkillsBtn && skillCardsContainer) {
         showMoreSkillsBtn.addEventListener('click', function() {
-          const container = document.getElementById('skillCards');
-          if (container) {
-            container.classList.toggle('show-all');
-            this.textContent = container.classList.contains("show-all") ? "Show Less" : "Show More";
-          }
+          const isShowingAll = skillCardsContainer.classList.toggle('show-all');
+          this.textContent = isShowingAll ? 'Show Less' : 'Show More';
+          this.setAttribute('aria-label', isShowingAll ? 'Show fewer skills' : 'Show more skills');
+
+          skillCardsContainer.style.transition = 'none';
+          void skillCardsContainer.offsetHeight;
+          skillCardsContainer.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+
+          setTimeout(() => {
+            const skillsSection = document.querySelector('#skills');
+            const navHeight = document.querySelector('nav').offsetHeight;
+            window.scrollTo({
+              top: skillsSection.getBoundingClientRect().top + window.pageYOffset - navHeight - 20,
+              behavior: 'smooth'
+            });
+          }, 100);
         });
       }
 
-      // Smooth Scrolling
+      // Theme Toggle
+      const themeToggle = document.querySelector('.theme-toggle');
+      if (themeToggle) {
+        themeToggle.addEventListener('click', () => {
+          document.body.classList.toggle('light-mode');
+          const isLightMode = document.body.classList.contains('light-mode');
+          themeToggle.innerHTML = isLightMode ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+          themeToggle.setAttribute('aria-label', isLightMode ? 'Switch to dark mode' : 'Switch to light mode');
+        });
+      }
+
+      // Smooth Scrolling Logic
       document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
+        anchor.addEventListener('click', function(e) {
           e.preventDefault();
           const targetId = this.getAttribute('href');
           const target = document.querySelector(targetId);
           if (target) {
-            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            if (this.closest('.mobile-menu')) {
+              closeMobileMenu();
+            }
+            setTimeout(() => {
+              const navHeight = document.querySelector('nav').offsetHeight;
+              window.scrollTo({
+                top: target.getBoundingClientRect().top + window.pageYOffset - navHeight - 20,
+                behavior: 'smooth'
+              });
+            }, 300);
           }
         });
       });
 
-      // Intersection Observer for Animations
+      // Intersection Observer for Fade-in Animations
       const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
       const observer = new IntersectionObserver((entries, observerInstance) => {
         entries.forEach(entry => {
@@ -1421,13 +1571,15 @@
 
       openModalBtns.forEach(btn => {
         btn.addEventListener('click', () => {
-          openModal(btn.dataset.modalId);
+          const modalId = btn.getAttribute('data-modal-id');
+          if (modalId) openModal(modalId);
         });
       });
 
       closeModalBtns.forEach(btn => {
         btn.addEventListener('click', () => {
-          closeModal(btn.dataset.modalId);
+          const modalId = btn.getAttribute('data-modal-id');
+          if (modalId) closeModal(modalId);
         });
       });
 
@@ -1440,13 +1592,11 @@
       window.addEventListener('keydown', function(event) {
         if (event.key === 'Escape') {
           const openModalEl = document.querySelector('.modal.show');
-          if (openModalEl) {
-            closeModal(openModalEl.id);
-          }
+          if (openModalEl) closeModal(openModalEl.id);
         }
       });
     });
   </script>
-
 </body>
 </html>
+```
